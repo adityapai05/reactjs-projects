@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Using HTML -->
+    <div id="html">
+        <h1>Demo D using HTML</h1>
+    </div>
+
+    <!-- Using Javascript -->
+    <div id="js">
+
+    </div>
+    <script>
+        const message = document.createElement('h1');
+        message.textContent = 'Demo D using Javascript';
+        const jsRoot = document.getElementById('js');
+        jsRoot.appendChild(message);
+    </script>
+
+    <!-- Using ReactJS CDN -->
+    <div id="react">
+
+    </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        const message = React.createElement('h1', {}, 'Demo D using ReactJS');
+        const root = ReactDOM.createRoot(document.getElementById('react'));
+        root.render(message);
+    </script>
+
+</body>
+
+</html>
